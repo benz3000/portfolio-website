@@ -27,9 +27,13 @@ footer {
     background: #1a1a1a;
 }
 img {
-    max-width: 100%; /* Prevents images from overflowing */
+    width: 150px; /* Prevents images from overflowing */
     height: auto; /* Keeps the aspect ratio */
-    border-radius: 10px; /* Optional: Makes images slightly rounded */
+    border-radius: 50%; /* Makes it round */
+    object-fit: cover; /* Crops and centers the image */
+    display: block;
+    margin: 20px auto;
+    
 }
 
 .video img {
