@@ -26,14 +26,13 @@ footer {
     padding: 10px;
     background: #1a1a1a;
 }
-img {
-    width: 150px; /* Prevents images from overflowing */
-    height: auto; /* Keeps the aspect ratio */
-    border-radius: 50%; /* Makes it round */
+.profile {
+    width: 150px; /* Set width */
+    height: 150px; /* Set equal height to make it a square */
+    border-radius: 50%; /* Makes it a perfect circle */
     object-fit: cover; /* Crops and centers the image */
     display: block;
     margin: 20px auto;
-    
 }
 
 .video img {
