@@ -6,7 +6,13 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-// Load Lottie animation (only if needed)
+// Animate profile image on page load
+window.addEventListener("load", () => {
+    const profileImg = document.querySelector(".profile");
+    profileImg.classList.add("animate");
+});
+
+// Load Lottie animation (if applicable)
 if (document.getElementById('lottie-animation')) {
     var animation = lottie.loadAnimation({
         container: document.getElementById('lottie-animation'),
@@ -16,5 +22,6 @@ if (document.getElementById('lottie-animation')) {
         path: 'assets/animation.json'
     });
 }
+
 
 

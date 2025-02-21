@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
     text-align: center;
     background-color: #13254c;
     color: #ffffff;
@@ -8,134 +8,77 @@ body {
     padding: 0;
 }
 
-/* Navigation */
-nav {
+/* Header Section */
+header {
+    padding: 80px;
     background: #111737;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-menu li {
-    display: inline;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 15px;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: #50b3ff;
-}
-
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Header Content */
-.header-content {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 100px 10%;
-    position: relative;
-}
-
-/* Left Side Text */
-.text-container {
+    justify-content: center;
     text-align: left;
-    max-width: 600px;
+    overflow: hidden;
 }
 
-.text-container h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.text-container p {
-    font-size: 18px;
-}
-
-/* Profile Image and Background */
+/* Profile Image Container */
 .profile-container {
     position: absolute;
     right: 0;
     top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.profile-bg {
-    width: 40vw;
     height: 100%;
-    background-color: #0d1a3a;
-    position: absolute;
-    right: 0;
-    border-radius: 100px 0 0 100px;
+    width: 40%;
+    background: linear-gradient(to left, rgba(19, 37, 76, 0.9), rgba(19, 37, 76, 0));
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    z-index: 1;
 }
 
-.profile-overlay {
-    width: 30vw;
-    height: 100%;
-    background-color: #0b152b;
-    position: absolute;
-    right: 0;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-}
-
+/* Profile Image */
 .profile {
-    width: 350px;
+    width: 400px;
     height: auto;
     object-fit: cover;
     position: absolute;
-    right: 20px;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Profile Image Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile.animate {
+    animation: slideIn 1s ease-out forwards;
 }
 
 /* Portfolio Section */
 #portfolio {
-    padding: 80px 20px;
+    padding: 50px;
 }
 
+/* Videos */
 .video iframe {
     width: 80%;
     height: 315px;
     margin: 10px;
 }
 
-/* TikTok Embed Styling */
+/* TikTok Embed */
 .tiktok-embed {
     background: none !important;
     border-radius: 15px;
     overflow: hidden;
-    width: 80%;
-    margin: auto;
 }
 
 /* Footer */
@@ -144,53 +87,24 @@ footer {
     background: #111737;
 }
 
-/* Mobile Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
-        display: none;
-        text-align: center;
-        background: #111737;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 50px;
-        z-index: 100;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .header-content {
+    header {
+        padding: 50px;
         flex-direction: column;
         text-align: center;
     }
 
     .profile-container {
-        width: 250px;
-        height: 350px;
-        margin-top: 20px;
-    }
-
-    .profile-overlay {
-        width: 100px;
-        border-top-left-radius: 150px;
-        border-bottom-left-radius: 150px;
+        width: 60%;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
     }
 
     .profile {
         width: 250px;
-        height: auto;
-    }
-
-    .video iframe {
-        width: 100%;
-        height: 250px;
+        right: -50px;
     }
 }
+
 
