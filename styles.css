@@ -64,6 +64,7 @@ nav {
     position: relative;
 }
 
+/* Left Side Text */
 .text-container {
     text-align: left;
     max-width: 600px;
@@ -80,36 +81,40 @@ nav {
 
 /* Profile Image and Background */
 .profile-container {
-    position: relative;
-    width: 300px;
-    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .profile-bg {
-    width: 100%;
+    width: 40vw;
     height: 100%;
     background-color: #0d1a3a;
     position: absolute;
     right: 0;
-    border-radius: 20px;
+    border-radius: 100px 0 0 100px;
 }
 
 .profile-overlay {
-    width: 150px;
+    width: 30vw;
     height: 100%;
     background-color: #0b152b;
     position: absolute;
     right: 0;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
 }
 
 .profile {
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: auto;
     object-fit: cover;
     position: absolute;
-    right: 0;
+    right: 20px;
     z-index: 2;
 }
 
@@ -173,7 +178,14 @@ footer {
     }
 
     .profile-overlay {
-        width: 120px;
+        width: 100px;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 150px;
+    }
+
+    .profile {
+        width: 250px;
+        height: auto;
     }
 
     .video iframe {
