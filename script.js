@@ -1,4 +1,15 @@
-// Responsive menu toggle (for mobile)
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+// Responsive menu toggle
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -6,22 +17,13 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-// Animate profile image on page load
+// Profile Image Fade-in Animation
 window.addEventListener("load", () => {
-    const profileImg = document.querySelector(".profile");
-    profileImg.classList.add("animate");
+    const profileImage = document.querySelector(".profile");
+    profileImage.style.opacity = "1";
+    profileImage.style.transform = "translateX(0)";
 });
 
-// Load Lottie animation (if applicable)
-if (document.getElementById('lottie-animation')) {
-    var animation = lottie.loadAnimation({
-        container: document.getElementById('lottie-animation'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'assets/animation.json'
-    });
-}
 
 
 
