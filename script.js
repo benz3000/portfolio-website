@@ -16,3 +16,11 @@ const navMenu = document.querySelector(".nav-menu");
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+// Load Lottie animation
+var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'), // The div where animation should appear
+    renderer: 'svg', // Render as SVG
+    loop: true, // Make it loop
+    autoplay: true, // Auto-start animation
+    path: 'assets/animation.json' // Path to your Lottie JSON file
+});
