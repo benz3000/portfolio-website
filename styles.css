@@ -48,3 +48,8 @@ footer {
 .video img:hover {
     opacity: 0.8;
 }
+.tiktok-embed {
+    background: none !important;
+    border-radius: 15px;
+    overflow: hidden;
+}
