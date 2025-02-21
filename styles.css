@@ -82,9 +82,9 @@ nav {
 /* Profile Image and Background */
 .profile-container {
     position: absolute;
-    right: -10vw; /* Move further right so part of it is cut */
-    top: 50%;
-    transform: translateY(-50%);
+    right: 0;
+    top: 0;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -92,7 +92,7 @@ nav {
 
 .profile-bg {
     width: 40vw;
-    height: 100vh;
+    height: 100%;
     background-color: #0d1a3a;
     position: absolute;
     right: 0;
@@ -101,20 +101,20 @@ nav {
 
 .profile-overlay {
     width: 30vw;
-    height: 100vh;
+    height: 100%;
     background-color: #0b152b;
     position: absolute;
     right: 0;
-    border-top-left-radius: 250px;
-    border-bottom-left-radius: 250px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
 }
 
 .profile {
-    width: 400px;
+    width: 350px;
     height: auto;
     object-fit: cover;
     position: absolute;
-    right: -50px; /* Push even more to the right */
+    right: 20px;
     z-index: 2;
 }
 
@@ -172,7 +172,6 @@ footer {
     }
 
     .profile-container {
-        right: -30vw; /* Push even more outside the screen */
         width: 250px;
         height: 350px;
         margin-top: 20px;
@@ -180,14 +179,13 @@ footer {
 
     .profile-overlay {
         width: 100px;
-        border-top-left-radius: 200px;
-        border-bottom-left-radius: 200px;
+        border-top-left-radius: 150px;
+        border-bottom-left-radius: 150px;
     }
 
     .profile {
         width: 250px;
         height: auto;
-        right: -70px; /* Push outside even more */
     }
 
     .video iframe {
@@ -195,3 +193,4 @@ footer {
         height: 250px;
     }
 }
+
