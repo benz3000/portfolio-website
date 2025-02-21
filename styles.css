@@ -90,7 +90,9 @@ header {
     object-fit: cover;
     position: absolute;
     right: -50px;
+    top: -95px;
     opacity: 0;
+    border-radius: 45%;
     transform: translateX(100px);
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
@@ -100,19 +102,19 @@ header {
     width: 100%;
     height: 100%;
     background-color: #0d1b3e;
-    border-radius: 50%;
+    border-radius: 30%;
     z-index: -2;
-    right: 0;
+    right: -100px;
 }
 
 .profile-layer {
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: #09132a;
     border-radius: 50%;
     z-index: -1;
-    right: 5%;
+    right: -10%;
 }
 
 /* Portfolio */
@@ -138,5 +140,8 @@ footer {
     padding: 15px;
     background: #111737;
 }
+
+
+
 
 
