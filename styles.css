@@ -1,7 +1,7 @@
 body {
     font-family: Playfair Display, Playfair Display, Playfair Display, Playfair Display, Playfair Display;
     text-align: center;
-    background-color: #c5a065;
+    background-color: #13254c;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -9,11 +9,11 @@ body {
 
 header {
     padding: 83px;
-    background: #ab8d57;
+    background: #111737;
 }
 
 #portfolio {
-    padding: 20px;
+    padding: 200px;
 }
 
 .video iframe {
@@ -24,7 +24,7 @@ header {
 
 footer {
     padding: 15px;
-    background: #53390b;
+    background: #111737;
 }
 .profile {
     width: 300px; /* Set width */
