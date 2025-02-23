@@ -9,27 +9,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Responsive menu toggle (for mobile)
+// Mobile Menu Toggle
 const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    navLinks.classList.toggle("active");
 });
 
-// Load Lottie animation
-var animation = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation'), // The div where animation should appear
-    renderer: 'svg', // Render as SVG
-    loop: true, // Make it loop
-    autoplay: true, // Auto-start animation
-    path: 'assets/animation.json' // Path to your Lottie JSON file
+// Lazy loading for embedded TikTok video
+document.addEventListener("DOMContentLoaded", function () {
+    const tiktokEmbed = document.querySelector(".tiktok-embed");
+    if (tiktokEmbed) {
+        const script = document.createElement("script");
+        script.src = "https://www.tiktok.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }
 });
 
-// Animation for profile image
-window.addEventListener("load", () => {
-    document.querySelector(".profile").style.animation = "slideInRight 1s ease-out forwards";
-});
 
 
 

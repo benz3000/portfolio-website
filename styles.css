@@ -6,81 +6,88 @@ body {
     background-color: #0f172a;
     color: #ffffff;
     text-align: center;
-    overflow-x: hidden;
-}
-
-/* Header */
-header {
-    position: relative;
-    background-color: #1e293b;
-    padding: 50px 20px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.profile-container {
-    position: absolute;
-    top: 50%;
-    right: -80px; /* Slightly off-screen for animation */
-    transform: translateY(-50%);
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.profile {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    animation: slideInRight 1s ease-out forwards;
-}
-
-/* Name and Title */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-h1 span {
-    display: block;
-}
-
-p {
-    font-size: 1.2rem;
-    opacity: 0.8;
 }
 
 /* Navigation */
-nav {
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
     background: #1e293b;
-    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.nav-menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.nav-menu li {
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-links li {
     display: inline;
 }
 
-.nav-menu a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-.nav-menu a:hover {
+.nav-links a:hover {
     color: #38bdf8;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    display: block;
+    color: #38bdf8;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.hero-image {
+    position: absolute;
+    top: -50px;
+    right: -80px;
+}
+
+.profile {
+    width: 350px;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeInRight 1s forwards ease-out;
 }
 
 /* Portfolio Section */
@@ -103,6 +110,12 @@ nav {
     overflow: hidden;
 }
 
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background: #1e293b;
+}
+
 /* Footer */
 footer {
     padding: 20px;
@@ -112,29 +125,43 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .profile-container {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #1e293b;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        position: relative;
+        right: 0;
+        top: 20px;
+    }
+
+    .profile {
         width: 200px;
-        height: 200px;
-        top: 10px;
-        right: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .video iframe {
-        width: 90%;
-        height: 250px;
-    }
-
-    .tiktok-embed {
-        max-width: 300px;
     }
 }
 
 /* Animations */
-@keyframes slideInRight {
+@keyframes fadeInRight {
     from {
         transform: translateX(100px);
         opacity: 0;
@@ -144,6 +171,7 @@ footer {
         opacity: 1;
     }
 }
+
 
 
 
