@@ -9,19 +9,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Responsive menu toggle
-const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
-// Profile Image Fade-in Animation
-window.addEventListener("load", () => {
+// Profile Image Animation on Load
+document.addEventListener("DOMContentLoaded", function () {
     const profileImage = document.querySelector(".profile");
-    profileImage.style.opacity = "1";
-    profileImage.style.transform = "translateX(0)";
+    if (profileImage) {
+        profileImage.style.transition = "opacity 1s ease, transform 1s ease";
+        profileImage.style.opacity = "1";
+        profileImage.style.transform = "translateX(0)";
+    }
 });
 
 
