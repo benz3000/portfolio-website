@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Responsive mobile menu toggle
+// Responsive menu toggle (for mobile)
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -17,27 +17,23 @@ menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-// Profile image animation on page load
-document.addEventListener("DOMContentLoaded", () => {
-    const profileImage = document.querySelector(".profile");
-    profileImage.style.opacity = "0";
-    profileImage.style.transform = "translateX(100px)";
-
-    setTimeout(() => {
-        profileImage.style.transition = "opacity 1s ease-out, transform 1s ease-out";
-        profileImage.style.opacity = "1";
-        profileImage.style.transform = "translateX(0)";
-    }, 500);
-});
-
-// Load Lottie animation (if you want animated icons)
+// Load Lottie animation
 var animation = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation'), // Ensure this ID is in your HTML
-    renderer: 'svg', 
-    loop: true, 
-    autoplay: true, 
+    container: document.getElementById('lottie-animation'), // The div where animation should appear
+    renderer: 'svg', // Render as SVG
+    loop: true, // Make it loop
+    autoplay: true, // Auto-start animation
     path: 'assets/animation.json' // Path to your Lottie JSON file
 });
+
+// Animation for profile image
+window.addEventListener("load", () => {
+    document.querySelector(".profile").style.animation = "slideInRight 1s ease-out forwards";
+});
+
+
+
+
 
 
 
