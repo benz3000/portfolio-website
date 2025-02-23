@@ -80,7 +80,7 @@ body {
 .hero-image {
     position: absolute;
     top: -50px;
-    right: -80px;
+    right: 0px;
 }
 
 .profile {
