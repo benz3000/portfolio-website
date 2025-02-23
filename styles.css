@@ -1,112 +1,148 @@
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: 'Playfair Display', sans-serif;
-    text-align: center;
-    background-color: #13254c;
-    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    max-width: 900px; /* Reduced website width */
-    margin: auto;
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Header */
 header {
-    padding: 60px 20px;
-    background: #111737;
     position: relative;
+    background-color: #1e293b;
+    padding: 50px 20px;
+    text-align: center;
     overflow: hidden;
 }
 
-/* Profile Image */
 .profile-container {
     position: absolute;
-    right: -80px; /* Pushed further right */
     top: 20px;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
 }
 
 .profile {
-    width: 280px;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    opacity: 0; /* Starts invisible for animation */
-    transform: translateX(100px); /* Starts off-screen */
-}
-
-/* Layers */
-.layer {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: rgba(0, 0, 50, 0.5);
     border-radius: 50%;
-    z-index: -1;
-    right: -100px;
+    animation: fadeInRight 1s ease-in-out;
 }
 
-.layer1 {
-    width: 300px;
-    height: 300px;
-    background: rgba(10, 20, 80, 0.8);
-    top: 30px;
+/* Name and Title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.layer2 {
-    width: 350px;
-    height: 350px;
-    background: rgba(20, 40, 100, 0.7);
-    top: 60px;
+h1 span {
+    display: block; /* Splits the name into two lines */
 }
 
-.layer3 {
-    width: 400px;
-    height: 400px;
-    background: rgba(30, 60, 120, 0.6);
-    top: 90px;
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1e293b;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #38bdf8;
 }
 
 /* Portfolio Section */
 #portfolio {
-    padding: 40px;
+    padding: 50px 20px;
 }
 
 .video iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 315px;
-    margin: 10px 0;
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    border-radius: 10px;
 }
 
 /* TikTok Embed */
 .tiktok-embed {
-    background: none !important;
+    margin: 20px auto;
+    max-width: 350px;
     border-radius: 15px;
     overflow: hidden;
-    max-width: 350px;
-    margin: auto;
 }
 
 /* Footer */
 footer {
-    padding: 15px;
-    background: #111737;
+    padding: 20px;
+    background: #1e293b;
+    margin-top: 50px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .profile-container {
-        right: -50px; /* Adjusted for mobile */
-        top: 10px;
-    }
-
-    .profile {
         width: 200px;
+        height: 200px;
+        top: 10px;
+        right: 10px;
     }
 
-    .layer {
-        width: 250px;
+    h1 {
+        font-size: 2rem;
+    }
+
+    .video iframe {
+        width: 90%;
         height: 250px;
-        right: -50px;
+    }
+
+    .tiktok-embed {
+        max-width: 300px;
     }
 }
+
+/* Animations */
+@keyframes fadeInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
