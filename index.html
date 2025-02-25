@@ -1,65 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zahr Eddine Benhamada - Video Editor</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zahr Eddine Benhamada - Video Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-        <div class="menu-toggle">☰</div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">☰</div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-text">
-            <h1>Zahreddine <span> Benhamada</span></h1>
-            <p>Professional Video Editor</p>
-        </div>
-        <div class="hero-image">
-            <img src="assets/images/pnpg2.PNG" alt="Profile Picture" class="profile">
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>
+        Zahreddine <span>Benhamada</span>
+      </h1>
+      <p>Professional Video Editor</p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/pnpg2.PNG" alt="Profile Picture" class="profile" />
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a dedicated video editor specializing in content for Twitch and YouTube creators.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a dedicated video editor specializing in content for Twitch and YouTube creators.
+    </p>
+  </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>My Work</h2>
-        <div class="video">
+  <!-- Portfolio Section with Tabs -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio-window">
+      <div class="portfolio-tabs">
+        <button class="tab-button active" data-tab="long">Long Form</button>
+        <button class="tab-button" data-tab="short">Short Form</button>
+      </div>
+      <div class="portfolio-content">
+        <div class="tab-content active" id="long-form">
+          <div class="video">
             <iframe src="https://www.youtube.com/embed/sm8dFVskI7Q" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ayleeattempts/video/7473002399578475798" 
-                    data-video-id="7473002399578475798">
-            <section> 
-                <a target="_blank" title="@ayleeattempts" href="https://www.tiktok.com/@ayleeattempts?refer=embed">@ayleeattempts</a> 
-                Just your average Overwatch experience. Edit Credit: @benz_visualz
-            </section> 
-        </blockquote>
-    </section>
+        <div class="tab-content" id="short-form">
+          <blockquote class="tiktok-embed" 
+                      cite="https://www.tiktok.com/@ayleeattempts/video/7473002399578475798" 
+                      data-video-id="7473002399578475798">
+            <section>
+              <a target="_blank" title="@ayleeattempts" href="https://www.tiktok.com/@ayleeattempts?refer=embed">
+                @ayleeattempts
+              </a>
+              Just your average Overwatch experience. Edit Credit: @benz_visualz
+            </section>
+          </blockquote>
+          <!-- TikTok embed script; lazy-loaded via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:benz.visualz@gmail.com">benz.visualz@gmail.com</a></p>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:benz.visualz@gmail.com">benz.visualz@gmail.com</a></p>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Zahr Eddine Benhamada. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Zahr Eddine Benhamada. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
