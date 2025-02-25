@@ -9,6 +9,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Mobile Menu Toggle with Smooth Animation
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        if (navLinks.classList.contains("active")) {
+            navLinks.style.maxHeight = "0px"; // Close with animation
+            setTimeout(() => navLinks.classList.remove("active"), 300);
+        } else {
+            navLinks.classList.add("active");
+            navLinks.style.maxHeight = "500px"; // Adjust based on content
+        }
+    });
+}
+
 // Lazy loading for embedded TikTok video
 document.addEventListener("DOMContentLoaded", function () {
     const tiktokEmbed = document.querySelector(".tiktok-embed");
@@ -19,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(script);
     }
 });
+
 
 
 

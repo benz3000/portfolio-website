@@ -46,6 +46,13 @@ body {
     color: #0f172a;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -142,10 +149,14 @@ footer {
         left: 0;
         text-align: center;
         padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
     .nav-links.active {
         display: flex;
+        max-height: 500px;
     }
 
     .hero {
@@ -174,6 +185,7 @@ footer {
         opacity: 1;
     }
 }
+
 
 
 
