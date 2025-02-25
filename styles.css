@@ -53,6 +53,26 @@ body {
     cursor: pointer;
 }
 
+/* Mobile Menu */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #1e293b;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.nav-links.active {
+    max-height: 300px; /* Adjust as needed */
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -171,6 +191,7 @@ footer {
         opacity: 1;
     }
 }
+
 
 
 
