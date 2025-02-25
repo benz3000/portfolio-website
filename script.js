@@ -16,12 +16,26 @@ const navLinks = document.querySelector(".nav-links");
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
     if (navLinks.classList.contains("active")) {
-      navLinks.style.maxHeight = "0px"; // Collapse menu
-      setTimeout(() => navLinks.classList.remove("active"), 300);
+      // Collapse menu with smooth animation
+      navLinks.style.transform = "translateX(100%)"; // Slide out to the right
+      setTimeout(() => {
+        navLinks.classList.remove("active");
+      }, 300); // Remove active class after animation
     } else {
+      // Expand menu with smooth animation
       navLinks.classList.add("active");
-      navLinks.style.maxHeight = "500px"; // Expand menu smoothly
+      navLinks.style.transform = "translateX(0)"; // Slide in from the right
     }
+  });
+
+  // Close menu when a link is clicked (for mobile)
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (navLinks.classList.contains("active")) {
+        navLinks.style.transform = "translateX(100%)"; // Slide out to the right
+        setTimeout(() => navLinks.classList.remove("active"), 300);
+      }
+    });
   });
 }
 
