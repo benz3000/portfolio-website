@@ -395,7 +395,7 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 20px 30px;
   }
 
   .menu-toggle {
@@ -408,7 +408,7 @@ footer {
     position: fixed;
     background: #1e293b;
     width: 250px;
-    top: 60px;
+    top: 22px;
     right: 0; /* Menu opens from the right */
     text-align: center;
     padding: 10px 0;
