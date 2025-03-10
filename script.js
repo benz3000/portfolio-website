@@ -20,7 +20,7 @@ if (menuToggle && navLinks) {
       navLinks.style.transform = "translateX(100%)"; // Slide out to the right
       setTimeout(() => {
         navLinks.classList.remove("active");
-      }, 300); // Remove active class after animation
+      }, 300);
     } else {
       // Expand menu with smooth animation
       navLinks.classList.add("active");
@@ -186,24 +186,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000); // 2-second delay for demonstration
   }
 });
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
