@@ -91,8 +91,8 @@ body {
 }
 
 .hero-image {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #38bdf8;
@@ -328,8 +328,8 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-image {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
 
   .hero-text h1 {
