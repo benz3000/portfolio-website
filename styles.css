@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 38px 30px;
+  padding: 30px 300px;
   background: #1e293b;
   position: sticky;
   top: 0;
@@ -24,7 +24,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 0px;
   padding: 0;
   transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -38,7 +38,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px 235px;
+  padding: 10px 150px;
   border-radius: 8px;
   transition: all 0.8s ease-in-out;
 }
@@ -47,6 +47,7 @@ body {
   background: #38bdf8;
   color: #0f172a;
 }
+
 
 /* Mobile Menu Toggle */
 .menu-toggle {
@@ -63,6 +64,11 @@ body {
   .menu-toggle {
     display: block;
   }
+  .navbar {
+ 
+  padding: 30px 30px;
+  
+}
 
   .nav-links {
     display: none;
@@ -194,6 +200,34 @@ body {
   background: #38bdf8;
   color: #0f172a;
 }
+  /* conteneur portrait responsive */
+  .video.portrait {
+    width: 100%;
+    max-width: 420px;      /* ajuste la largeur max comme tu veux */
+    aspect-ratio: 9 / 16;  /* force le format portrait */
+    margin: 0 auto;        /* centre si tu veux */
+  }
+
+  .video.portrait iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  /* fallback pour navigateurs sans aspect-ratio */
+  @supports not (aspect-ratio: 9/16) {
+    .video.portrait {
+      position: relative;
+      padding-bottom: 177.7777%; /* = 16/9 -> portrait */
+      height: 0;
+    }
+    .video.portrait iframe {
+      position: absolute;
+      inset: 0;
+    }
+  }
+  
 
 /* Testimonials Section */
 #testimonials {
